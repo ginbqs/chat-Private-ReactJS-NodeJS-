@@ -1,0 +1,46 @@
+Arguments: 
+  /home/infokes_15/.nvm/versions/node/v16.14.0/bin/node /home/infokes_15/.nvm/versions/node/v16.14.0/bin/yarn add express mongoose socket.io bcyrpt cors dotenv
+
+PATH: 
+  /lib/Android/Sdk/tools:/home/infokes_15/.nvm/versions/node/v16.14.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/opt/jdk-18/bin:/lib/Android/Sdk/emulator:/lib/Android/Sdk/platform-tools
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.14.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/bcyrpt: Not found
+      at Request.params.callback [as _callback] (/home/infokes_15/.nvm/versions/node/v16.14.0/lib/node_modules/yarn/lib/cli.js:66138:18)
+      at Request.self.callback (/home/infokes_15/.nvm/versions/node/v16.14.0/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:520:28)
+      at Request.<anonymous> (/home/infokes_15/.nvm/versions/node/v16.14.0/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:520:28)
+      at IncomingMessage.<anonymous> (/home/infokes_15/.nvm/versions/node/v16.14.0/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:639:28)
+      at IncomingMessage.emit (node:events:532:35)
+      at endReadableNT (node:internal/streams/readable:1346:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
