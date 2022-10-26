@@ -19,6 +19,7 @@ module.exports.register = async(req, res, next) => {
             email,
             username,
             password: hassedPassword,
+            isAvatarImageSet:true
         })
         delete user.password;
         return res.json({ msg: "User successfully created", status: true, user })

@@ -36,10 +36,10 @@ export default function Contact({ contacts, currentUser, changeChat }) {
                                     return (
                                         <div className={`contact ${currentSelected==index ? 'selected' : ''}`} key={index} onClick={() => changeCurrentChat(index,contact)}>
                                             <div className="avatar">
-                                                <img src={`data:image/svg+xml;base64,${contact.avatarImage}`} alt="avatar" />
+                                                <img src='/sercretuser.png' alt="avatar" />
                                             </div>
                                             <div className="username">
-                                                <h3>{contact.username} {contact._id}</h3>
+                                                <h3>{contact.username}</h3>
                                             </div>
                                         </div>
                                     )

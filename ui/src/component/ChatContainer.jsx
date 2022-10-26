@@ -10,8 +10,6 @@ import Message from './Message';
 
 
 export default function ChatContainer({ currentChat, currentUser, socket }) {
-    console.log('currentChat halaman')
-    console.log(currentChat)
     const [messages, setMessages] = useState([])
     const [arrivalMessage, setArrivalMessage] = useState(null)
     const scrollRef = useRef();
@@ -30,9 +28,6 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
         })
         const msgs = [...messages]
         msgs.push({ fromSelf: true, message: msg,sender: currentUser._id})
-        console.log('====mengirim pesan====')
-        console.log(msgs)
-        console.log('===============')
         setMessages(msgs)
     }
     useEffect(() => {
@@ -48,25 +43,13 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
         }
     }, [currentChat])
     const handleInviteAccepted = useCallback((data) => {
-        console.log('==menerima pesan==')
-        console.log(data)
-        console.log(currentChat)
-        console.log('====')
         if(data.sender==currentChat._id){
             setArrivalMessage({ fromSelf: false, message: data.msg, sender: data.sender })
         }
     }, [currentChat]);
     useEffect(() => {
         if (socket.current && currentChat) {
-            // socket.current.on('msg-recieve', (data) => {
-            //     console.log('==menerima pesan==')
-            //     console.log(data)
-            //     console.log(currentChat)
-            //     console.log('====')
-            //     if(data.sender==currentChat._id){
-            //         setArrivalMessage({ fromSelf: false, message: data.msg, sender: data.sender })
-            //     }
-            // })
+        
             socket.current.on('msg-recieve', handleInviteAccepted);
             return () => {
             // before the component is destroyed
@@ -90,7 +73,7 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
                         <div className="chat-header">
                             <div className="user-details">
                                 <div className="avatar">
-                                    <img src={`data:image/svg+xml;base64,${currentChat?.avatarImage}`} alt="avatar" />
+                                    <img src='/sercretuser.png' alt="avatar" />
                                 </div>
                                 <div className="username">
                                     <h3>{currentChat?.username}</h3>
